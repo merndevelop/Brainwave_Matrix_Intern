@@ -1,0 +1,890 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+  <head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/R.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/R.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/R.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/R.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Rtsouls</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+   
+     
+
+    .swiper {
+      width: 240px;
+      height: 320px;
+      
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .swiper-slide:nth-child(1n) {
+      background-color: rgb(206, 17, 17);
+    }
+
+    .swiper-slide:nth-child(2n) {
+      background-color: rgb(0, 140, 255);
+    }
+
+    .swiper-slide:nth-child(3n) {
+      background-color: rgb(10, 184, 111);
+    }
+
+    .swiper-slide:nth-child(4n) {
+      background-color: rgb(211, 122, 7);
+    }
+
+    .swiper-slide:nth-child(5n) {
+      background-color: rgb(118, 163, 12);
+    }
+
+    .swiper-slide:nth-child(6n) {
+      background-color: rgb(180, 10, 47);
+    }
+
+    .swiper-slide:nth-child(7n) {
+      background-color: rgb(35, 99, 19);
+    }
+
+    .swiper-slide:nth-child(8n) {
+      background-color: rgb(0, 68, 255);
+    }
+
+    .swiper-slide:nth-child(9n) {
+      background-color: rgb(218, 12, 218);
+    }
+
+    .swiper-slide:nth-child(10n) {
+      background-color: rgb(54, 94, 77);
+    }
+ /* whatsappbutton styling */
+
+    .buttonStyle  {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50%
+      };
+      .iconStyle:hover{
+        background-color: #000;
+        margin-right: 40px;
+      }
+      .hover-text {
+      display: none;
+      position: absolute;
+      top: -65px;
+      left: -10%;
+      transform: translateX(-50%);
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    /* Show hover text on button hover */
+    .buttonStyle:hover .hover-text {
+      display: block;
+    }
+      
+    
+       .iconStyle {
+        
+        font-size: 34px;
+    
+      };
+
+.border1
+{
+    border: 2px solid #000000;
+}
+.cardcolor {
+    background-color: #f4ab25;
+}
+.nav-link{
+  color: #000000;
+}
+
+
+.dots {
+      display: inline;
+    }
+    .more {
+      display: none;
+    }
+    .read-more-btn {
+      cursor: pointer;
+    }
+
+    img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* inter-300 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+</style>
+
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+    <div class="buttonStyle">
+      <a
+        href="https://wa.me/923030478951" target="_blank" rel="noopener noreferrer"   className="btn btn-success whtbtn"
+      > <span class="hover-text">What do you need help<br/> with today?</span>
+        <i class="fab fa-whatsapp iconStyle" ></i>
+        
+      </a>
+    </div>
+
+    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0" >
+  <div class="container">
+    <a class="navbar-brand pe-4 fs-4" href="#">
+      <img src="./img/logo.png" alt="" style="width: 200px;"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+      <li class="nav-item">
+    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+      Services
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#aboutus">
+      About us
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#resource">
+      Resource
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#team">
+      Our Team
+    </a>
+  </li>
+  <!-- <li class="nav-item"></li>
+    <a class="nav-link" href="#gallery">
+      Gallery
+    </a>
+  </li> -->
+  <li class="nav-item">
+    <a class="nav-link" href="#workwithus">
+      Work with us
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#testimonials">
+      Testimonials
+    </a>
+  </li>
+
+    </ul>
+      <a target="_blank" href="https://www.facebook.com/rtsouls" class=" pb-1 me-2">
+        <i class="fa-brands fa-facebook"></i>      
+      </a>
+      <a target="_blank" href="https://www.instagram.com/rtsouls_company" class=" pb-1 me-2">
+        <i class="fa-brands fa-square-instagram p-2"></i>     
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/company/rtsouls/"  class=" pb-1 me-2">
+        <i class="fa-brands fa-linkedin-in  "></i>    
+      </a>
+      <a target="_blank" href="#"  class=" pb-1 me-2">
+     <i class="fa-brands fa-square-x-twitter"></i> 
+      </a>
+
+    </div>
+</div>
+</nav>
+
+    <main>
+      <div class="w-100 overflow-hidden bg-gray-100" id="top">
+  
+<div class="container position-relative">
+  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/webp/home.png); width: 670px; height: 650px;">
+    </div>
+    <div class="row">
+<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+  <h1 class="display-1 fw-bold mt-5">Unlock Your Business Potential</h1>
+  <p class="lead">Here, we have a creative team that will help you communicate your business worldwide.</p>
+  <a href="#contact" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Get in touch</a>
+</div>
+</div></div>
+</div>
+
+
+<div class="py-vh-5 w-100 overflow-hidden" id="services">
+  <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-12 text-center" data-aos="fade-down">
+          <img src="./img/1.png" alt="services" class="img-fluid" />
+        </div>
+</div><br/>
+
+<div class="row d-flex align-items-center">
+  <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="200">
+    <!-- <span class="h5 fw-lighter">01.</span> -->
+    <img src="./img/RTS/3.png"  alt="Web Development" style="width: 350px; height: 200px;"/>
+    <h3 class="pt-3 ">Software Development</h3>
+    <p>Our software development services provide custom solutions designed to meet your business needs. We develop<span class="dots">...</span><span class="more"> reliable, scalable, and efficient software applications tailored to optimize your workflows and enhance performance. From system architecture to deployment, <b>RTSouls</b> ensures high-quality, innovative software that drives success for your business.</span></p>
+   
+    <button class="read-more-btn">Read more</button>
+  </div>
+
+<div class="col-md-6 col-lg-4 py-vh-1 pb-0" data-aos="fade-up" data-aos-delay="400">
+
+  <img src="./img/RTS/4.png" style="width: 350px; height: 200px;"/>
+  <h3 class="pt-3 ">Graphics Designer</h3>
+  <p>Our graphic design services turn your ideas into stunning visuals that leave a lasting impression. From logos to full <span class="dots">...</span><span class="more">brand identities, we create designs that resonate with your audience and elevate your brand. With a focus on creativity and detail, <b>RTSouls</b> delivers unique, high-quality visuals that bring your vision to life.</span></p>
+  <button class="read-more-btn">Read more</button>
+ 
+</div>
+
+<div class="col-md-6 col-lg-4 py-vh-1 pb-0 " data-aos="fade-up" data-aos-delay="600">
+ 
+  <img src="./img/RTS/8.png" style="width: 350px; height: 200px;"/>
+  <h3 class="pt-3 ">Digital Media Marketing</h3>
+  <p>Our digital media marketing services cover a comprehensive range of solutions to boost your online presence. We<span class="dots">...</span><span class="more">specialize in Search Engine Optimization (SEO) and Search Engine Marketing (SEM) to increase visibility and drive traffic. Through Social Media Marketing, we engage your audience on key platforms, while our Content Marketing ensures your message reaches the right people. We manage your content effortlessly with our Content Management System (CMS) and craft targeted campaigns with Email Marketing. Plus, with Mobile Marketing, we ensure your brand connects with users on-the-go.</span></p>
+  <button class="read-more-btn">Read more</button>
+</div>
+</div>
+<br/><br/>
+<div class="row d-flex align-items-center">
+  <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="200">
+   
+    <img src="./img/RTS/7.png" style="width: 350px; height: 200px;"/>
+    <h3 class="pt-3 ">Video Editing</h3>
+    <p>Our video editing services bring your stories to life through captivating visuals and seamless transitions. Whether<span class="dots">...</span><span class="more"> it’s promotional content, social media videos, or corporate presentations, we craft engaging, high-quality videos that align with your brand. From editing raw footage to adding effects and sound, <b>RTSouls</b>delivers polished, professional results that make an impact.</span></p>
+    <button class="read-more-btn mb-4">Read more</button>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="400">
+   
+    <img src="./img/RTS/9.png" style="width: 350px; height: 200px;"/>
+    <h3 class="pt-3 ">Content Writing</h3>
+    <p>Our content writing services create engaging and persuasive content tailored to your audience and brand<span class="dots">...</span><span class="more">. We specialize in crafting compelling articles, blog posts, website copy, and marketing materials that drive engagement and convey your message effectively. With a focus on SEO and readability, <b>RTSouls</b> ensures your content not only resonates with readers but also ranks well on search engines.</span></p>
+    <button class="read-more-btn mb-4">Read more</button>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="600">
+   
+    <img src="./img/RTS/11.png" style="width: 350px; height: 200px;"/>
+    <h3 class="pt-3 ">Web Solutions</h3>
+    <p>
+      A web solution is a comprehensive service or application designed to meet specific business needs
+      <span class="dots">...</span>
+      <span class="more"> online, such as websites, e-commerce platforms, or web-based tools. It includes development, design, maintenance, and optimization to ensure seamless functionality and user experience.</span>
+    </p>
+    <button class="read-more-btn">Read more</button>
+  </div>
+  </div><br/><br/>
+  <div class="row d-flex align-items-center">
+    <div class="col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="200">
+     
+      <img src="./img/RTS/13.webp" style="width: 350px; height: 200px;"/>
+      <h3 class="pt-3 ">NetOps Solutions</h3>
+      <p>Our NetOps solutions provide end-to-end management and optimization of your IT infrastructure. We specialize<span class="dots">...</span><span class="more"> in Information Technology analysis, strategy, and design to create robust systems tailored to your needs. Our services include network design, continuous maintenance, and support, as well as change and configuration management to ensure seamless operations. We prioritize security with firewall protection, IAVA and STIG compliance, and DNS management. With on-site maintenance and expert network security design and analysis, <b>RTSouls</b> ensures your network remains secure and efficient. We also offer IT change management, process development, and ongoing consultation for continuous improvement.</span></p>
+      <button class="read-more-btn mb-4">Read more</button>
+    </div>
+    
+    <div class="col-md-6 col-lg-4  " data-aos="fade-up" data-aos-delay="400">
+      
+      <img src="./img/RTS/2.png" style="width: 350px; height: 200px;"/>
+      <h3 class="pt-3">Camera Installation</h3>
+      <p>Our camera installation services provide comprehensive solutions for enhanced security and surveillance. We<span class="dots">...</span><span class="more"> design and install high-quality camera systems tailored to your specific needs, ensuring optimal coverage and performance. From planning and setup to ongoing support, <b>RTSouls</b> delivers reliable, state-of-the-art camera installations to keep your property secure and monitored.</span></p>
+      <button class="read-more-btn mb-4">Read more</button>
+    </div>
+    
+    <div class="col-md-6 col-lg-4  " data-aos="fade-up" data-aos-delay="600" >
+      
+      <img src="./img/RTS/1.png" style="width: 350px; height: 200px; margin-top: -30px;"/>
+      <h3 class="pt-3 ">Data recovery</h3>
+      <p>Our data recovery services help you retrieve lost or corrupted files quickly and securely. Whether due<span class="dots">...</span><span class="more">to accidental deletion, hardware failure, or malware, we specialize in recovering critical data from a variety of devices. At <b>RTSouls</b>, we ensure your valuable information is restored with care and precision, minimizing downtime and disruption.</span></p>
+      <button class="read-more-btn">Read more</button>
+    </div>
+    <div class="col-md-6 col-lg-4  " data-aos="fade-up" data-aos-delay="600">
+      
+      <img src="./img/RTS/12.png" style="width: 350px; height: 200px;"/>
+      <h3 class="pt-3 ">Hardware Supply & Maintenance</h3>
+      <p>Hardware Supply & Maintenance involves providing, installing, and configuring physical IT equipment<span class="dots">...</span><span class="more">.  such as servers, computers, and network devices. It also includes ongoing support, troubleshooting, repairs, and upgrades to ensure optimal performance and minimize downtime.</span></p>
+      <button class="read-more-btn">Read more</button>
+    </div> 
+    </div>
+
+  </div>
+</div>
+
+<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+  <div class="container">
+      
+<div class="row d-flex justify-content-between align-items-center">
+  <div class="col-lg-6">
+  <div class="row gx-5 d-flex">
+    <div class="col-md-11">
+      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/webp/building.png);--bs-aspect-ratio: 50%;">
+      </div>
+    </div>
+    <div class="col-md-5 offset-md-1">
+      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/webp/building1.png);">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/webp/people4.png);--bs-aspect-ratio: 150%;">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <h3 class="py-5 border-top border-dark" data-aos="fade-left">Welcome to RT Souls Growing IT Company.</h3>
+  <p data-aos="fade-left" data-aos-delay="200" style="text-align: justify;">RT Souls is an IT Software Company founded in Sep 2015 in Pakistan. We are offering multiple services in Website Development, Graphic Designing, Digital Marketing, and Mobile Apps Development. We make CMS, CRM and provide ERP solutions. Additional services that we provide include website Designing, API's Development, SEO Services and IOS app development. We have highly experienced web developers who have successfully launched various huge projects and proved their skills in many projects.
+  </p>
+  <p>
+    <!-- <a href="#" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
+    </a> -->
+  </p>
+</div>
+</div>
+
+  </div>
+</div>
+
+<div class="py-vh-5 w-100 overflow-hidden" id="resource">
+  <div class="container">
+      <div class="row d-flex justify-content-center align-items-center" style="background-color: #f2f2f2;">
+  <div class="col-lg-5" >
+    <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our resources & support</h3>
+</div>
+<div class="col-lg-6">
+  <div class="row">
+    <div class="col-12">
+    <!-- <h2 class="display-6 mb-5" data-aos="fade-down">"There are a number of resources and support that I collaborate with."</h2> -->
+    </div>
+    <div class="col-lg-12" data-aos="fade-up">
+      <div class="display-1 fw-bold py-4">
+        <img src="./img/resource.png" alt="" style="width: 600px;"/>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+</div> 
+
+<div class="container py-vh-4 w-100 overflow-hidden">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-5">
+  <h3 class="py-5 border-top border-dark" data-aos="fade-right">What our clients say</h3>
+</div>
+<div class="col-md-7" data-aos="fade-left">
+  <blockquote>
+    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3" style="text-align: justify;">“I'am the President of this organization. So perhaps you think "he will let us know something very magnificent about it as it were". However, no. Its a truly unusual work environment with frightening individuals all around.
+      They do some PC stuff I don't have any idea. In any case, I wear costly Glasses and a Patagonia Hoodie. So I'am fine with it.”</div>
+    <img src="img/testi/person13.jpg" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
+    <span><span class="fw-bold">John Doe,</span>
+      CEO of Stride Ltd.</span>
+  </blockquote>
+</div>
+
+  </div>
+</div>
+
+<!-- //marquee -->
+
+<div className='container-fluid  my-3'>
+  <Marquee>                     
+                <img src="./img/logos/3.png" alt='img'/>
+                <img src="./img/logos/4.png" alt='img'/>
+                <img src="./img/logos/5.png" alt='img'/>
+                <img src="./img/logos/6.png" alt='img'/> 
+                <img src="./img/logos/7.png" alt='img'/>
+                <img src="./img/logos/8.png" alt='img'/>
+                <img src="./img/logos/9.png" alt='img'/>
+                <img src="./img/logos/10.png" alt='img'/> 
+                <img src="./img/logos/11.png" alt='img'/>
+                <img src="./img/logos/12.png" alt='img'/>
+                <img src="./img/logos/13.png" alt='img'/>
+                <img src="./img/logos/14.png" alt='img'/> 
+                <img src="./img/logos/15.png" alt='img'/>
+                <img src="./img/logos/16.png" alt='img'/>
+                <img src="./img/logos/Adobe.png" alt='img'/>
+                <img src="./img/logos/Meta.png" alt='img'/> 
+   </Marquee>
+</div>
+
+<div class="py-vh-5 w-100 overflow-hidden" id="team">
+  <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+
+
+<div class="col-lg-7">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #f4ab25;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muhammad Tayyab</h5>
+            <p class="card-text">CEO</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #9c1f4b;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hafiz Muhammad Rashid</h5>
+            <p class="card-text">Senior Developer</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #f4ab25;">
+          <img src="./img/girl.jpg" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sidra</h5>
+            <p class="card-text">Web Developer</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #9c1f4b;">
+          <img src="./img/girl.jpg" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sana Ejaz</h5>
+            <p class="card-text">Graphic Designer</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #f4ab25;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ali Adnan</h5>
+            <p class="card-text">Network Engineer</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #9c1f4b;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Shoaib Akhtar</h5>
+            <p class="card-text">Marketing Manager</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #f4ab25;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muhammad Hazib</h5>
+            <p class="card-text">Graphic Designer</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card p-2" style="width: 18rem; background-color: #f4ab25;">
+          <img src="./img/boy.webp" class="card-img-top rounded-circle bg-light pt-3" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Arsalan Shahid</h5>
+            <p class="card-text">CCTV Technician</p>
+            
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
+    </div>
+  </div>
+ 
+
+  </div>
+  <div class="col-lg-5" data-aos="fade-down"> <h3 class="py-5 border-top border-dark text-center" data-aos="fade-right">Our Team</h3>
+ 
+  </div>
+</div>
+</div>
+
+<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden mt-5" id="workwithus">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center text-center">
+  <div class="col-lg-8 " data-aos="fade">
+        <p class="text-secondary lead">Let´s start a project together!</p>
+    <h3 class=" mb-5" style="text-align: justify; font-weight: 400;" >Together, let's get this project started. I have faith in your knowledge and commitment. I'm sure that when we work together, we'll produce amazing outcomes.</h3>
+  </div>
+  <div class="col-12">
+    <a href="#contact" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="bg-light w-100 overflow-hidden" id="testimonials">
+  <div class="container py-vh-6">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8 text-center">
+  <h2 class="display-6">Loved by people all around the globe</h2>
+  <p class="lead">Our spaces and offices are soooooo lovely, no one would give us a negative rating! And look at these trustworthy avatar pictures! Trust us!</p>
+</div>
+<div class="col-12 mt-4">
+  <div class="row row-cols-1 row-cols-md-2 g-5 d-flex align-items-center">
+
+    <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-right">
+      <div class="card p-4 mt-3 border-0">
+        <div class="card-body">
+          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+  <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
+</svg>
+</div>
+          <blockquote class="blockquote">
+            <p>"That service is really really good. And I don´t say that because they pay me a lot of money. I say that because they don´t pay me more money anymore if I don´t say it..."</p>
+          </blockquote>
+          <div class="d-flex justify-content-between border-top pt-3">
+            <div>
+              <span class="h6 fw-5">Jane Doemunsky</span><br>
+              <small class="text-muted">COO, The Boo Corp.</small>
+            </div>
+            <img src="img/testi/person1.jpg" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 col-xl-4">
+      <div class="card p-4 shadow mt-3 border-0" data-aos="fade-down">
+        <div class="card-body">
+          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg>
+</div>
+          <blockquote class="blockquote">
+            <p>"I really don´t get what they do. Something with Crypto, NFT´s, SaaS and Cyber Security. Maybe an App for Kids...? But they have this nice website...so who cares what they do as long as they are good at it."</p>
+          </blockquote>
+          <div class="d-flex justify-content-between border-top pt-3">
+            <p class="card-text">
+              <span class="h6 fw-5">Jenny Matrix</span><br>
+              <small class="text-muted">Daughter of Col. John Matrix, Commando.</small>
+            </p>
+            <img src="img/testi/person3.jpg" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6 col-xl-4">
+      <div class="card p-4 mt-3 border-0" data-aos="fade-left">
+        <div class="card-body">
+          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg>
+</div>
+          <blockquote class="blockquote">
+            <p>"I don´t know if they are good at what they do. But they have nice coffee and a shiny brand new startup office with bikes on the wall and all that stuff."</p>
+          </blockquote>
+          <div class="d-flex justify-content-between border-top pt-3">
+            <p class="card-text">
+              <span class="h6 fw-5">Rustin Cohle</span><br>
+              <small class="text-muted">Detective, Somewhere in the swamps</small>
+            </p>
+            <img src="img/testi/person5.jpg" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="small py-vh-3 w-100 overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
+  <div class="d-flex">
+    <div class="col-md-3 flex-fill pt-3 pe-3 pe-md-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-box-seam" viewbox="0 0 16 16">
+        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+      </svg>
+    </div>
+    <div class="col-md-9 flex-fill">
+      <h3 class="h5 my-2">Delivery Service</h3>
+      <p>Our IT project delivery service ensures timely, secure, and efficient execution, meeting all your business needs.</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 col-lg-4 border-end" data-aos="fade-up" data-aos-delay="200">
+  <div class="d-flex">
+    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-card-checklist" viewbox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+      </svg>
+    </div>
+    <div class="col-md-9 flex-fill">
+      <h3 class="h5 my-2">Independently Checked</h3>
+      <p>Our IT solutions are independently checked to guarantee accuracy, security, and top-quality performance.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+  <div class="d-flex">
+    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-window-sidebar" viewbox="0 0 16 16">
+        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
+      </svg>
+    </div>
+    <div class="col-md-9 flex-fill">
+      <h3 class="h5 my-2">Online Support</h3>
+      <p>Our dedicated online support team is available around the clock to assist you with any IT challenges, ensuring seamless project progress.</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    </main>
+  </section> -->
+  <section class="contact  pb-5" id="contact">
+    <div class="container">
+      <div class="row d-flex">
+      
+        <div class="col-lg-4 col-md-4 col-sm-12 cardcolor py-5 text-white ">
+          <div class="col-12 ">
+                  <h2 class="ps-5">Contact Us</h2>
+                  <h5 class="contacttext mt-3 ps-4"><i class="fa-solid fa-phone pe-3 mt-3"style="font-size:24px;"></i>   
+                    +92 303 0478951</h5>
+                   <h5 class="contacttext mt-3 ps-4"><i class="fa-solid fa-envelope pe-3 mt-3"style="font-size:24px;"></i>  
+                    info@rtsouls.com</h5>
+          <h5 class="contacttext mt-4 ps-4"><i class="fa-solid fa-location-dot pe-3 mt-2"style="font-size:24px;"></i>   
+             Office No 7 First Floor Gohar<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  Center Wahdat Road Lahore</h5>
+             
+             
+          </div>
+    
+
+
+        </div>
+        <!-- <div class="col-1 bg-light"></div> -->
+        <div class="col-lg-8 col-md-7 col-sm-12 col-12 bg-light py-3">
+          <h2 class="ms-3 mb-3">Get In Touch</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13604.590752955783!2d74.3223877!3d31.5201034!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb91ca13605b178b4!2sGohaar%20Center!5e0!3m2!1sen!2s!4v1673388497793!5m2!1sen!2s" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ALL RIGHT RESERVED BY RT Souls -->
+    <!-- start footer -->
+    <div class="container-fluid text-center border-top border-dark py-vh-3 ">
+      <a target="_blank" href="https://www.facebook.com/rtsouls"><i class="fa-brands fa-facebook  p-2 px-3"></i></a>
+      <a target="_blank" href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/company/rtsouls/"><i class="fa-brands fa-linkedin-in  p-2 ps-3"></i></a>
+      <a target="_blank" href="https://www.instagram.com/rtsouls_company"><i class="fa-brands fa-square-instagram  p-2 "></i></a>
+      <!-- <a href=""><i class="fa-brands fa-youtube  p-2 "></i></a> -->
+
+      <p class="mt-4">Copyright© 2023 RT Souls All Rights Reserved</p>
+
+    </div>
+    <!-- end footer -->
+
+   
+<script>
+  document.querySelectorAll('.read-more-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+      const parent = button.parentElement;
+      const dots = parent.querySelector('.dots');
+      const moreText = parent.querySelector('.more');
+      const isExpanded = dots.style.display === 'none';
+
+      dots.style.display = isExpanded ? 'inline' : 'none';
+      button.textContent = isExpanded ? 'Read more' : 'Read less';
+      moreText.style.display = isExpanded ? 'none' : 'inline';
+    });
+  });
+</script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+ <script>
+ AOS.init({
+   duration: 800, // values from 0 to 3000, with step 50ms
+ });
+ </script>
+
+ <script>
+  let scrollpos = window.scrollY
+  const header = document.querySelector(".navbar")
+  const header_height = header.offsetHeight
+
+  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+  window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })
+</script>
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+   var swiper = new Swiper(".mySwiper", {
+     effect: "cards",
+     grabCursor: true,
+   });
+ </script>
+
+  </body>
+</html>
